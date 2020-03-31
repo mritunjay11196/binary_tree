@@ -78,8 +78,8 @@ void Tree::postOrder(Node* p)
 {
     if(p)
     {
-        preOrder(p->lchild);
-        preOrder(p->rchild);
+        postOrder(p->lchild);
+        postOrder(p->rchild);
         std::cout<<p->data<<" ";
     }
     
@@ -89,9 +89,9 @@ void Tree::inOrder(Node* p)
 {
     if(p)
     {
-        preOrder(p->lchild);
+        inOrder(p->lchild);
         std::cout<<p->data<<" ";
-        preOrder(p->rchild);
+        inOrder(p->rchild);
     }
     
 }
